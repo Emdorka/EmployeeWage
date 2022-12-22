@@ -6,16 +6,23 @@ public class WageComputation {
         final int WORKING_HOUR = 8;
         final int PART_TIME = 4;
         int dailyWage = 0;
-        double empCheck = Math.floor(Math.random() * 10) % 3;
-        if (empCheck == 1) {
-            dailyWage = WAGE_PER_HOUR * WORKING_HOUR;
-            System.out.println("Employee is present " );
-            } else if ( empCheck == 2) {
-            System.out.println(" Employee is part - time ");
-            dailyWage = WORKING_HOUR * PART_TIME;
-        } else {
-                System.out.println("Employee is absent");
+        int empCheck = (int) Math.floor(Math.random() * 10) % 3;
+        System.out.println(empCheck);
+        switch (empCheck) {
+            case 1: {
+                System.out.println("Employee is present ");
+                dailyWage = WORKING_HOUR * WAGE_PER_HOUR;
             }
-        System.out.println(" Employee daily wage is " + dailyWage);
+             break;
+            case 2: {
+                System.out.println(" Employee is part - time ");
+                dailyWage = WORKING_HOUR * PART_TIME;
+            }
+            break;
+            case 0: {
+                System.out.println(" Employee is Absent " );
+            }
         }
+        System.out.println( "Employee daily wage is " + dailyWage);
     }
+}
