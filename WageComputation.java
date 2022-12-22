@@ -7,8 +7,9 @@ public class WageComputation {
         int dailyWage = 0;
         double empCheck =  Math.floor(Math.random() * 10) % 2;
         if (empCheck == 1) {
+            System.out.println(" The employee is present ");
             dailyWage = WORKING_HR * DAILY_PER_HR;
-            System.out.println("Employee is present " + dailyWage);
+            System.out.println("Employee Daily Wage " + dailyWage);
         }
         else{
             System.out.println("Employee is absent");
